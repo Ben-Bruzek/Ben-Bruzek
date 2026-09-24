@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF0EA;
+    --ink: #1B2420;
+    --ink-soft: #4B564F;
+    --blue: #28576F;
+    --gold: #B98A34;
+    --line: #C6CBC0;
+    --max-w: 720px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--blue); }
+  a:hover { color: var(--gold); }
+
+  .wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.hero {
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 20px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(36px, 6vw, 52px);
+    line-height: 1.08;
+    margin: 0 0 20px;
+    max-width: 11ch;
+  }
+
+  .intro {
+    max-width: 58ch;
+    color: var(--ink-soft);
+    font-size: 18px;
+    margin: 0 0 28px;
+  }
+
+  nav.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    font-size: 15px;
+  }
+
+  nav.links a { text-decoration: none; border-bottom: 1px solid var(--line); }
+  nav.links a:hover { border-bottom-color: var(--gold); }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 26px;
+    margin: 0 0 32px;
+  }
+
+  .about p { max-width: 62ch; color: var(--ink-soft); margin: 0 0 16px; }
+
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+  }
+  .project:first-of-type { border-top: none; padding-top: 0; }
+
+  .project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .project-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 21px;
+    margin: 0;
+  }
+
+  .project-period { font-size: 14px; color: var(--ink-soft); white-space: nowrap; }
+
+  .project-desc { color: var(--ink-soft); max-width: 62ch; margin: 4px 0 8px; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 14px; color: var(--blue); margin-bottom: 4px; }
+  .tags span::before { content: "· "; color: var(--line); }
+  .tags span:first-child::before { content: ""; }
+
+  .project-link { font-size: 15px; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 24px 32px;
+  }
+
+  .skills-group h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+
+  .skills-group ul { list-style: none; margin: 0; padding: 0; }
+  .skills-group li { padding: 3px 0; border-bottom: 1px dotted var(--line); }
+  .skills-group li:last-child { border-bottom: none; }
+
+  footer {
+    padding: 56px 0 80px;
+  }
+
+  footer .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 24px;
+    font-size: 15px;
+  }
+
+  footer .note {
+    margin-top: 28px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 560px) {
+    header.hero { padding: 64px 0 48px; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Portfolio — Data Analytics &amp; GIS</p>
+    <h1>Your Name</h1>
+    <p class="intro">
+      I'm a student studying [your major], focused on turning messy public
+      data into maps and models that answer real questions. This site holds
+      a few of the projects I'm proudest of.
+    </p>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <p>
+        Replace this paragraph with a short, specific version of your story —
+        what you study, what kind of problems you like working on, and what
+        you're looking for next (an internship, a full-time role, collaborators).
+      </p>
+      <p>
+        A second short paragraph works well here too, for a relevant detail
+        like where you go to school, a club or research group you're part of,
+        or a technical interest you want recruiters to notice first.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <p class="project-title">SEPTA Regional Rail Ridership vs. Population Density</p>
+        <p class="project-period">2026</p>
+      </div>
+      <p class="project-desc">
+        Replace with your real summary — e.g., built a spatial pipeline joining
+        Census tract population to station catchment areas, then modeled
+        ridership against density, service frequency, and distance to Center City.
+      </p>
+      <p class="tags"><span>ArcGIS Pro</span><span>Python</span><span>Census Data</span><span>Regression</span></p>
+      <p class="project-link"><a href="#">View write-up →</a></p>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <p class="project-title">Project Two Title</p>
+        <p class="project-period">2025</p>
+      </div>
+      <p class="project-desc">
+        One or two sentences on the problem, your approach, and the outcome.
+        Be specific about a result if you have one — a number is more
+        convincing than an adjective.
+      </p>
+      <p class="tags"><span>R</span><span>Tableau</span><span>SQL</span></p>
+      <p class="project-link"><a href="#">View write-up →</a></p>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <p class="project-title">Project Three Title</p>
+        <p class="project-period">2024</p>
+      </div>
+      <p class="project-desc">
+        Same pattern — what it was, how you built it, what you found.
+        Keep this to a couple of lines; the write-up link is for the detail.
+      </p>
+      <p class="tags"><span>Python</span><span>scikit-learn</span></p>
+      <p class="project-link"><a href="#">View write-up →</a></p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skills-group">
+        <h3>Languages</h3>
+        <ul>
+          <li>R (tidyverse, ggplot2)</li>
+          <li>Python (pandas, NumPy, scikit-learn)</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h3>Tools</h3>
+        <ul>
+          <li>ArcGIS Pro</li>
+          <li>Tableau</li>
+          <li>Git / GitHub</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h3>Coursework</h3>
+        <ul>
+          <li>Replace with a relevant course</li>
+          <li>Replace with a relevant course</li>
+          <li>Replace with a relevant course</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact</h2>
+    <div class="contact-row">
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="/resume.pdf">Resume (PDF)</a>
+    </div>
+    <p class="note">Site built with plain HTML/CSS — no framework required.</p>
+  </footer>
+</div>
+
+</body>
+</html>
