@@ -145,23 +145,6 @@
 
   .project-link { font-size: 15px; }
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 24px 32px;
-  }
-
-  .skills-group h3 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--ink-soft);
-    margin: 0 0 10px;
-  }
-
-  .skills-group ul { list-style: none; margin: 0; padding: 0; }
-  .skills-group li { padding: 3px 0; border-bottom: 1px dotted var(--line); }
-  .skills-group li:last-child { border-bottom: none; }
-
   footer {
     padding: 56px 0 80px;
   }
@@ -197,7 +180,6 @@
     </p>
     <nav class="links">
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -235,41 +217,12 @@
       <p class="tags"><span>ArcGIS Pro</span><span>Python</span><span>Census Data</span><span>Regression</span></p>
       <p class="project-link"><a href="#">View write-up →</a></p>
     </div>
-
-    <div class="project">
-      <div class="project-head">
-        <p class="project-title">Project Two Title</p>
-        <p class="project-period">2025</p>
-      </div>
-      <p class="project-desc">
-        One or two sentences on the problem, your approach, and the outcome.
-        Be specific about a result if you have one — a number is more
-        convincing than an adjective.
-      </p>
-      <p class="tags"><span>R</span><span>Tableau</span><span>SQL</span></p>
-      <p class="project-link"><a href="#">View write-up →</a></p>
-    </div>
-
-    <div class="project">
-      <div class="project-head">
-        <p class="project-title">Project Three Title</p>
-        <p class="project-period">2024</p>
-      </div>
-      <p class="project-desc">
-        Same pattern — what it was, how you built it, what you found.
-        Keep this to a couple of lines; the write-up link is for the detail.
-      </p>
-      <p class="tags"><span>Python</span><span>scikit-learn</span></p>
-      <p class="project-link"><a href="#">View write-up →</a></p>
-    </div>
-  </section>
-
+    
   <footer id="contact">
     <h2>Contact</h2>
     <div class="contact-row">
       <a href="mailto:benjamin.bruzek@temple.edu">benjamin.bruzek@temple.edu</a>
       <a href="https://www.linkedin.com/in/benjamin-bruzek/">LinkedIn</a>
-      <a href="assets/Benjamin%Bruzek%Resume.pdf">Resume (PDF)</a>
     </div>
     <p class="note">Site built with plain HTML/CSS — no framework required.</p>
   </footer>
