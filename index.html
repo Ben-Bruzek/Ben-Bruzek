@@ -217,16 +217,15 @@
       <p class="project-desc">
         My next question is if there are any stations that are used less than expected for the
         population density of a 1-mile radius around them. Here is a quick summary of the process
-        I followed to create the following visualizations;
-        - Selected the ridership count observations on weekdays in 2024
-        - Used the summary statistics tool to combine observations by station
-        - Converted the table back into a shapefile using XY to point and reprojected into my project CRS 
-        - Created a buffer around each station and intersected the buffer with the census tracts shapefile 
-        - Estimated the population in each stations buffer by calculating the proportion of land area of 
-        each tract within the buffer. That proportion of the tracts population was then attributed to the 
-        station buffer using summary statistics. 
-        - Exported the table to excel so that I could create the graph in R using ggplot2.
-        why is this not updating
+        I followed to create the following visualizations; <br>
+        - Selected the ridership count observations on weekdays in 2024 <br>
+        - Used the summary statistics tool to combine observations by station <br>
+        - Converted the table back into a shapefile using XY to point and reprojected into my project CRS <br>
+        - Created a buffer around each station and intersected the buffer with the census tracts shapefile <br>
+        - Estimated the population in each stations buffer by calculating the proportion of land area of <br>
+        each tract within the buffer. That proportion of the tracts population was then attributed to the <br>
+        station buffer using summary statistics. <br>
+        - Exported the table to excel so that I could create the graph in R using ggplot2. <br>
       </p>
       <p class="figure-title">Population Within 1-Mile Buffer vs. Weekday Ridership</p>
       <figure class="hero-map">
