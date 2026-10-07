@@ -217,7 +217,13 @@
       <p class="project-desc">
         My next question is if there are any stations that are used less than expected for the
         population density of a 1-mile radius around them. I selected the ridership count 
-        observations on weekdays in 2024.
+        observations on weekdays in 2024. I used the summary statistics tool to combine observations
+        by station. Next, I had to convert the table back into a shapefile using XY to point and 
+        reproject into my project CRS. Then, I created a buffer around each station and intersected 
+        the buffer with the census tracts shapefile. I estimated the population in each stations buffer
+        by calculating the proportion of land area of each tract within the buffer. That proportion of 
+        the tracts population was then attributed to the station buffer using summary statistics. I 
+        took the table to R so that I could create the graph using ggplot2.
       </p>
       <p class="figure-title">Population Within 1-Mile Buffer vs. Weekday Ridership</p>
       <figure class="hero-map">
