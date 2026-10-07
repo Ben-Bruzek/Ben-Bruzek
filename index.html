@@ -219,26 +219,16 @@
         population density of a 1-mile radius around them. Here is a quick summary of the process
         I followed to create the following visualizations; 
       </p>
-      <p class="project-desc">
-        - Selected the ridership count observations on weekdays in 2024
-      </p>
-      <p class="project-desc">
-        - Used the summary statistics tool to combine observations by station 
-      </p>
-      <p class="project-desc">
-        - Converted the table back into a shapefile using XY to point and reprojected into my project CRS 
-      </p>
-      <p class="project-desc">
-        - Created a buffer around each station and intersected the buffer with the census tracts shapefile 
-      </p>
-      <p class="project-desc">
-        - Estimated the population in each stations buffer by calculating the proportion of land area of 
-        each tract within the buffer. That proportion of the tracts population was then attributed to the 
-        station buffer using summary statistics. 
-      </p>
-      <p class="project-desc">
-        - Exported the table to excel so that I could create the graph in R using ggplot2. 
-      </p>
+      <ul class="project-desc">
+        <li>Selected weekday ridership observations from 2024</li>
+        <li>Combined observations by station using Summary Statistics</li>
+        <li>Converted the table back into a shapefile using XY to point and reprojected into my project CRS</li>
+        <li>Created a buffer around each station and intersected the buffer with the census tracts shapefile </li>
+        <li>Estimated the population in each stations buffer by calculating the proportion of land area of 
+            each tract within the buffer. That proportion of the tracts population was then attributed to the 
+            station buffer using summary statistics.  </li>
+        <li>Exported the table to excel so that I could create the graph in R using ggplot2 </li>
+      </ul>
       <p class="figure-title">Population Within 1-Mile Buffer vs. Weekday Ridership</p>
       <figure class="hero-map">
         <img src="assets/img/pop_ride4.png"
